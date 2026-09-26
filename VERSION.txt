@@ -1,0 +1,4 @@
+Water 4.0 Public Source Disclosure Candidate Beta v0.9.0
+Authoritative runtime: Water 4.0 Integrated Public Release Candidate Beta - v0.9.0
+Contract runtime: v0.0.60 / config schema 2
+Source disclosure status: OFFLINE VERIFIED / REVIEW READY
