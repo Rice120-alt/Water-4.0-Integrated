@@ -1,0 +1,93 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FWQuestOverlay</AssemblyName>
+    <RootNamespace>FWQuestOverlay</RootNamespace>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>false</SelfContained>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <!--
+    Water Broker presentation assets are linked directly from the immutable,
+    build-scoped item identity repository. Embedding them keeps the existing
+    single-file companion deployment and avoids a new runtime path boundary.
+  -->
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Consumables\T_item_med_morphine.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.small_first_aid.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_FirstAid.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.medium_first_aid.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Consumables\T_item_med_FirstAidKit.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.large_first_aid.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_545x39.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_545_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_556x45.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_556_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_12x76.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_12g_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_45acp.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_45acp_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_545x39_762.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_762_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_40mm.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_40mm_pack.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Generic\T_Item_Alcool13.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.mead.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\LevelDesign\Wastelands\Kai\JunkEcon\Portraits\T_JunkEcon_11_PowerCell.png"
+                      LogicalName="FWQuestOverlay.WaterBrokerIcons.power_cell.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_MiscMedication.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.assorted_medicine.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_Bloodpacs.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.blood_packs.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_AdvancedMedicalTools.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.trauma_kit.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_9x19.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_9mm_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_50cal.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_50bmg_pack.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_20mm.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_20mm_pack.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_Demo_Ammo_545x39_SURPLUS.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.ammo_545_surplus_crate.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_AluminumCan.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.beer.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_GDC_FoodTin.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.food_tin.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Generic\T_Item_JunkFood01.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.boinco_candy.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Generic\T_Item_JunkFood02.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.potato_chips.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\ItemPortrait_GDC_Chocbar_canteen.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.water_canteen.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Generic\T_Item_Alcool14.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.ethyl_alcohol.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\Generic\T_Item_Cigarettes03.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.hinoko_cigarettes.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\SuperWeaponComponents\T_Item_SuperWeapon_Component01.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.railgun_component.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_Goodies.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.goodies.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_Scavbag.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.scav_go_bag.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\T_Portrait_GRN_ingredient_Gunpowder.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.gunpowder.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\T_Portrait_GRN_ingredient_MetalFragments.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.metal_fragments.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\LevelDesign\Wastelands\Kai\JunkEcon\Portraits\T_Portrait_JunkEcon_43_MilitaryCables.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.military_cables.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_ElectricMotor.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.electric_motor.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\LevelDesign\Wastelands\Kai\JunkEcon\Portraits\T_Portrait_JunkEcon_30_CPU.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.cpu.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\Blueprints\ThumbnailCreator\Loot_Item_Icons\T_ProcessorBoard.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.processor_board.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\LevelDesign\Wastelands\Kai\JunkEcon\Portraits\T_JunkEcon_81_SewingKit.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.sewing_kit.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\Prototype_RigSystem\Items\Drones\T_Drone_Recovery.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.recovery_drone.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\Prototype_RigSystem\Items\Drones\T_Drone_FastTravel.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.fast_travel_drone.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\Prototype_RigSystem\Items\Drones\T_Drone_Construction.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.construction_drone.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\T_DrillDevice.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.deployable_drill.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\T_ItemPortrait_HRF05CRAFTING_CFT07.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.at_mass_component.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_RFL01.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_ak.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_RFL01B.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_rpk.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_RFL23.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_m16.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_PST01.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_usp.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_SMG04.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_wlt_mpl.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_SMG05.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_apc9.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_SMG07.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_pp19.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_SMG08.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_spectre.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_SHG03.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_usas12.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_SHG05.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_aa12.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_HRF01.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_scar.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_LMG03.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_m60.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\ItemPortraits\T_AshenMesa_LootObject_01.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.high_frequency_radio.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\LevelDesign\Wastelands\Kai\JunkEcon\Portraits\T_Portrait_JunkEcon_123_CyborgImmunosuppresant.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.cyborg_immunosuppressant.png" />
+    <EmbeddedResource Include="..\..\research\item-identity\build-25071553\icons\Game\ArtAssets\UI\Inventory\Textures\WeaponPortraits\WeaponPortraitsBaked\T_HRF04.png" LogicalName="FWQuestOverlay.WaterBrokerIcons.weapon_gm6.png" />
+    <EmbeddedResource Include="..\..\recovered\reference\WaterBrokerPortrait-original.jpg"
+                      LogicalName="FWQuestOverlay.WaterBrokerShopkeeper.portrait.jpg" />
+  </ItemGroup>
+</Project>
